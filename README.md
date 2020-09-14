@@ -1,6 +1,6 @@
 # 2020-Fun_Race_3d_SpeedTest
  
- I’ve spent approximately 4:30 hours in order to do the desired test. I’m not proud of the result because I think I could do it much better.
+ I’ve spent approximately 4:30 hours in order to do the desired test. I’m not that proud of the result because I think I could do it much better.
 The most difficult part for me was the player’s movement setup. I’ve spent too much time trying to figure out the math behind its movement. I’m a bit rusty with the vectorial math. 
 A lot of things could be done better:
 - The code structure is not the best I can do, by far, however I’m not used to work with souch finite amount of time.
