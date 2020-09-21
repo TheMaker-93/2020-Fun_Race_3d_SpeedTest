@@ -18,3 +18,6 @@ Well, in order to improve the game, some things could be done:
 
 Have a nice day if you are reading this 
 
+EDIT: This project is not perfect AT ALL and should only be seen as an example of what I'm able to do with a time frame of 4 and a half hours. Neither the systems nor the architecture of the project should be taken as an example of "good practice". It does have some good things but those are few in comparison with the things I would do differently in this project.
+
+This project does show what I can make work with limited time and not how I would make a game if the clarity and quality of the code was the first priority.
