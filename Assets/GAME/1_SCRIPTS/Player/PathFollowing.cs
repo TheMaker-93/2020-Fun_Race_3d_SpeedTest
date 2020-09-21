@@ -32,7 +32,10 @@ public class PathFollowing : MonoBehaviour
 
     public void Setpath(Transform[] _levelPath)
     {
-        pathToFollow = _levelPath;
+        if (_levelPath == null || _levelPath.Length == 0)
+            Debug.LogError("No path was passed to the PATH FOLLOWING script´. Unable to set path");
+        else 
+            pathToFollow = _levelPath;
     }
 
     private void Start()
@@ -43,6 +46,8 @@ public class PathFollowing : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+
         if (active == true && currentPointToRreachIndex < pathToFollow.Length )
             MoveToNextPoint();
         else
@@ -71,7 +76,7 @@ public class PathFollowing : MonoBehaviour
 
     private void RotateToNextPoint()
     {
-        Debug.LogError("Temporal");
+        Debug.Log("Temporal");
         this.transform.forward = pathToFollow[currentPointToRreachIndex].transform.forward;
 
     }
@@ -88,15 +93,15 @@ public class PathFollowing : MonoBehaviour
 
     private void IncreaseTargetIndex ()
     {
-
-        if (currentPointToRreachIndex >= pathToFollow.Length)
-        {
-            Debug.Log("Path end reached");
-        }
-        else
+        if (currentPointToRreachIndex + 1 < pathToFollow.Length)
         {
             currentPointToRreachIndex++;
         }
+        else
+        {
+            Debug.Log("Path end reached");
+        }
+
 
     }
 

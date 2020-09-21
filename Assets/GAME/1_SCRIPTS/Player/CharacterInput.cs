@@ -9,7 +9,6 @@ public class CharacterInput : MonoBehaviour
 {
     [SerializeField] private bool enabled = true;
     [SerializeField] private bool isButtonBeingPressed;
-    [SerializeField] private PathFollowing pathFollowingController;
 
     public InputPressedEvent OnInputButtonDown;
     public InputPressedEvent OnInputButtonUp;
@@ -23,8 +22,11 @@ public class CharacterInput : MonoBehaviour
     }
 
     internal void DisableInputs()
-    {
+    { 
         enabled = false;
+        OnInputButtonDown?.Invoke(false);
+        OnInputButtonUp?.Invoke(false);
+
     }
     internal void EnableInputs()
     {
@@ -47,6 +49,10 @@ public class CharacterInput : MonoBehaviour
 
                 OnInputButtonUp?.Invoke(isButtonBeingPressed);
             }
+        }
+        else
+        {
+
         }
 
         
